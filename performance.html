@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculando la aproximacion</title>
     <script text="type/javascript">
-    alert("Capitan, ustede debe introducir la siguiente informacion solicitada para obtener sus datos de aproximacion")
+    alert("Capitan, usted debe introducir la siguiente informacion solicitada para obtener sus datos de aproximacion")
 
     var altactual;
     var altdesead;
@@ -15,22 +15,22 @@
     var distanchordesc;
     var tasadescen;
 
-    altactual = prompt("Indique su altura actual");
-    altdesead = prompt("Indique su altura deseada");
+    altactual = prompt("Indique su altitud actual (FT)");
+    altdesead = prompt("Indique su altitud deseada (FT)");
 
     distanchordesc = ((( altactual - altdesead ) / 1000) * 3) + 3
-    alert("Tome en cuenta que su distancia horizontal para el descenso es de " + distanchordesc + " NM");
+    //alert("Tome en cuenta que su distancia horizontal para el descenso es de " + distanchordesc + " NM");
 
-    groundspeed = prompt("Indique su velocidad con relacion al terreno");
+    groundspeed = prompt("Indique su velocidad con relacion al terreno (GS)");
     tasadescen = (groundspeed / 2) * 10
     
     tiempodesc = (distanchordesc / groundspeed) * 60
-    alert("Tome en cuenta que su tiempo para el descenso es " + tiempodesc + " minutos con una velocidad vertical de " + tasadescen + "FT/min");
+    alert("Para su aproximacion tome en cuenta que su tiempo para el descenso es " + tiempodesc + " minutos con una velocidad vertical de " + tasadescen + "FT/min a una distacia de " + distanchordesc + " NM");
 
     </script>
 </head>
 <body>
-    <h1>Calculando la aproximacion en el Cessna 172</h1>
+    <h1>Calculando las aproximaciones</h1>
     <p>NOTA: Referirse al manual del operacion del piloto (POH) para la obtencion de datos estandar de la aeronave y elementos a considerar,
     <br>
     debe hacerse antes de la planificacion del vuelo. Leer NOTAMS, cartas de navegacion y aproximacion. 
@@ -38,6 +38,7 @@
     <br>
     <br>
 <h1>IMPORTANTE:</h1> 
-<p>No usar para procedimientos operacionales, esto es solo un ensayo. </p>
+<p>No usar para procedimientos operacionales, esto es solo un ensayo.
+<br>Solo para vuelo simulado.</p>
 </body>
 </html>
