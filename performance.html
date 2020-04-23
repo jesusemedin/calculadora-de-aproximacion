@@ -15,13 +15,13 @@
     var distanchordesc;
     var tasadescen;
 
-    altactual = prompt("Indique su altitud actual (FT)");
-    altdesead = prompt("Indique su altitud deseada (FT)");
+    altactual = prompt("Indique su altitud actual (FT)","3500");
+    altdesead = prompt("Indique su altitud deseada (FT)","1000");
 
     distanchordesc = ((( altactual - altdesead ) / 1000) * 3) + 3
     //alert("Tome en cuenta que su distancia horizontal para el descenso es de " + distanchordesc + " NM");
 
-    groundspeed = prompt("Indique su velocidad con relacion al terreno (GS)");
+    groundspeed = prompt("Indique su velocidad con relacion al terreno (GS)","90");
     tasadescen = (groundspeed / 2) * 10
     
     tiempodesc = (distanchordesc / groundspeed) * 60
