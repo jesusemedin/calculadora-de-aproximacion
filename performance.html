@@ -6,39 +6,6 @@
     <title>Calculando la aproximación</title>
     <script text="type/javascript">
 
-    function aproximacion()
-    {
-    var nombre = prompt("Cual es su nombre?","nombre") + ",";
-
-    alert("Capitan " + nombre + " usted debe introducir la siguiente informacion solicitada para obtener sus datos de aproximación");
-
-    var altactual;
-    var altdesead;
-    var tiempodesc;
-    var groundspeed;
-    var distanchordesc;
-    var tasadescen;
-
-    altactual = prompt("Indique su altitud actual (FT)","3500");
-    altdesead = prompt("Indique su altitud deseada (FT)","1000");
-
-    distanchordesc = (((( altactual - altdesead ) / 1000) * 3) + 3);
-
-    groundspeed = prompt("Indique su velocidad con relacion al terreno (GS)","90");
-    tasadescen = (groundspeed / 2) * 10;
-    
-    tiempodesc = (distanchordesc / groundspeed) * 60;
-
-    document.getElementById('aproximacionfinal').innerHTML = "Capitan " 
-    + nombre + 
-    " para su aproximación tome en cuenta que su tiempo para el descenso es " 
-    + tiempodesc +
-    " minutos con una velocidad vertical de " 
-    + tasadescen + 
-    "FT/min a una distacia de " 
-    + distanchordesc + 
-    " NM";
-    }
     </script>
 </head>
 <body>
