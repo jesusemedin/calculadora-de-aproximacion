@@ -14,7 +14,9 @@
         altitudactual = Number(document.getElementById("cajadeactual").value);
         groundspeed = Number(document.getElementById("cajadespeed").value);
 
-        distanciahorizontal = 
+        distanciahorizontal = (((( altitudactual - altituddeseada ) / 1000) * 3) + 3);
+
+        alert(distanciahorizontal)
 
     };
 
