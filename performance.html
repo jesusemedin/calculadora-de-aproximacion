@@ -6,13 +6,40 @@
     <title>Calculando la aproximación</title>
     <script text="type/javascript">
 
+    var altituddeseada,altitudactual, groundspeed, boton;
+
+    function calculo ()
+    {
+        altituddeseada = Number(document.getElementById("cajadedeseada").value);
+        altitudactual = Number(document.getElementById("cajadeactual").value);
+        groundspeed = Number(document.getElementById("cajadespeed").value);
+
+
+    };
+
+    function iniciar ()
+    {
+
+        boton = document.getElementById("boton")
+        boton.addEventListener("click", calculo)
+
+    };
     </script>
 </head>
 <body>
     <h1>Calculando la aproximación</h1>
-    <h3><p><div id="aproximacionfinal">Aqui se mostrara el resultado</div></p></h3>
-    <button onclick=aproximacion()><h2>Calcular aproximación</h2></button>
-    <br>
+
+    <label> Indique su altitud <strong>deseada</strong> </label>
+    <input type="number" id="cajadedeseada"></input> <br><br>
+
+    <label> Indique su altitud <strong>actual</strong> </label>
+    <input type="number" id="cajadeactual"></input> <br><br>
+
+    <label> Indique su velocidad referente al terreno <strong>(GS)</strong></label>
+    <input type="number" id=cajadespeed></input> <br><br>
+
+    <input type="button" id="boton" value="Calcular" />
+
     <p>NOTA: Referirse al manual del operacion del piloto (POH) para la obtencion de datos estandar de la aeronave y elementos a considerar,
     <br>
     debe hacerse antes de la planificacion del vuelo. Leer NOTAMS, cartas de navegacion y aproximación. 
@@ -26,5 +53,8 @@
 <p>© Todos los derechos reservados. 2020.
 <br> Jesus Medina Bota    
 </p>
+<script type="text/javascript">
+    iniciar();
+</script>
 </body>
 </html>
