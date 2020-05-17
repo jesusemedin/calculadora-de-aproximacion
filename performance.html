@@ -13,6 +13,9 @@
     var distanciahorizontal;
     var velocidadvertical;
     var tiempodedescenso;
+    var nombre;
+
+    nombre = prompt("Cual es nombre?")
 
     function calculo ()
     {
@@ -27,10 +30,10 @@
     
         tiempodedescenso = (distanciahorizontal / groundspeed) * 60;
 
-
-        document.getElementById("distanciahor").innerHTML = "Distancia horizontal para el descenso:\n" + distanciahorizontal + " NM";
-        document.getElementById("velocverti").innerHTML = "Velocidad vertical para el descenso:\n" + velocidadvertical + " FT/Min";
-        document.getElementById("tiempodes").innerHTML = "Tiempo para el descenso:\n" + tiempodedescenso + " Minutos";
+        document.getElementById("name").innerHTML = "Capitan " + nombre + "," + " sus datos para la aproximacion son los siguientes: "
+        document.getElementById("distanciahor").innerHTML = "Distancia horizontal para el descenso: <br />" + distanciahorizontal + " NM";
+        document.getElementById("velocverti").innerHTML = "Velocidad vertical para el descenso: <br />" + velocidadvertical + " FT/Min";
+        document.getElementById("tiempodes").innerHTML = "Tiempo para el descenso: <br />" + tiempodedescenso + " Minutos";
         
         
         // var primercalculo = (((( altitudactual - altituddeseada ) / 1000 ) * 3 ) + 3 );
@@ -60,6 +63,8 @@
     <input type="number" id=cajadespeed></input> <br><br>
 
     <input type="button" id="boton" value="Calcular" />
+
+    <h2><div id="name"></div></h2>
     
     <h3><div id="distanciahor"></div></h3>
 
