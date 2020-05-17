@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculando la aproximación</title>
+    <title>Aproximación</title>
     <script text="type/javascript">
 
-    var altituddeseada,altitudactual, groundspeed, boton, distanciahorizontal;
+    var altituddeseada;
+    var altitudactual;
+    var groundspeed;
+    var boton;
+    var distanciahorizontal;
+    var velocidadvertical;
+    var tiempodedescenso;
 
     function calculo ()
     {
@@ -17,9 +23,15 @@
 
         distanciahorizontal =  (((( altitudactual - altituddeseada ) / 1000 ) * 3 ) + 3 );
 
-        document.getElementById("distanciahor").innerHTML = distanciahorizontal;
-        document.getElementById("tiempodes").innerHTML = distanciahorizontal;
-        document.getElementById("velocverti").innerHTML = distanciahorizontal;
+        velocidadvertical = (groundspeed / 2) * 10;
+    
+        tiempodedescenso = (distanciahorizontal / groundspeed) * 60;
+
+
+        document.getElementById("distanciahor").innerHTML = "Distancia horizontal para el descenso:\n" + distanciahorizontal + " NM";
+        document.getElementById("velocverti").innerHTML = "Velocidad vertical para el descenso:\n" + velocidadvertical + " FT/Min";
+        document.getElementById("tiempodes").innerHTML = "Tiempo para el descenso:\n" + tiempodedescenso + " Minutos";
+        
         
         // var primercalculo = (((( altitudactual - altituddeseada ) / 1000 ) * 3 ) + 3 );
         // distanciahorizontal.innerHTML = primercalculo;
@@ -47,15 +59,12 @@
     <label> Indique su velocidad referente al terreno <strong>(GS)</strong></label>
     <input type="number" id=cajadespeed></input> <br><br>
 
-    <input type="button" id="boton" value="Calcular" /><br><br>
+    <input type="button" id="boton" value="Calcular" />
     
-    <h2>Distancia horizontal para el descenso: </h2>
-    <h3><div id="distanciahor"></div></h3><br><br>
+    <h3><div id="distanciahor"></div></h3>
 
-    <h2>Tiempo para el descenso: </h2>
-    <h3><div id="tiempodes"></div></h3><br><br>
+    <h3><div id="tiempodes"></div></h3>
 
-    <h2>Velocidad vertical para el descenso: </h2>
     <h3><div id="velocverti"></div></h3>
 
     <p>NOTA: Referirse al manual del operacion del piloto (POH) para la obtencion de datos estandar de la aeronave y elementos a considerar,
