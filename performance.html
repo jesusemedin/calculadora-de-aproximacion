@@ -10,21 +10,27 @@
 
     function calculo ()
     {
+
         altituddeseada = Number(document.getElementById("cajadedeseada").value);
         altitudactual = Number(document.getElementById("cajadeactual").value);
         groundspeed = Number(document.getElementById("cajadespeed").value);
 
-        distanciahorizontal = (((( altitudactual - altituddeseada ) / 1000) * 3) + 3);
+        distanciahorizontal =  (((( altitudactual - altituddeseada ) / 1000 ) * 3 ) + 3 );
 
-        alert(distanciahorizontal)
+        document.getElementById("distanciahor").innerHTML = distanciahorizontal;
+        document.getElementById("tiempodes").innerHTML = distanciahorizontal;
+        document.getElementById("velocverti").innerHTML = distanciahorizontal;
+        
+        // var primercalculo = (((( altitudactual - altituddeseada ) / 1000 ) * 3 ) + 3 );
+        // distanciahorizontal.innerHTML = primercalculo;
 
     };
 
     function iniciar ()
     {
-
-        boton = document.getElementById("boton")
-        boton.addEventListener("click", calculo)
+        // distanciahorizontal = document.getElementById("distanciahor");
+        boton = document.getElementById("boton");
+        boton.addEventListener("click", calculo);
 
     };
     </script>
@@ -41,7 +47,16 @@
     <label> Indique su velocidad referente al terreno <strong>(GS)</strong></label>
     <input type="number" id=cajadespeed></input> <br><br>
 
-    <input type="button" id="boton" value="Calcular" />
+    <input type="button" id="boton" value="Calcular" /><br><br>
+    
+    <h2>Distancia horizontal para el descenso: </h2>
+    <h3><div id="distanciahor"></div></h3><br><br>
+
+    <h2>Tiempo para el descenso: </h2>
+    <h3><div id="tiempodes"></div></h3><br><br>
+
+    <h2>Velocidad vertical para el descenso: </h2>
+    <h3><div id="velocverti"></div></h3>
 
     <p>NOTA: Referirse al manual del operacion del piloto (POH) para la obtencion de datos estandar de la aeronave y elementos a considerar,
     <br>
@@ -49,7 +64,7 @@
     <br>
     <br>
     <br>
-<h1>IMPORTANTE:</h1> 
+<h2>IMPORTANTE:</h2> 
 <p>No usar para procedimientos operacionales, esto es solo un ensayo.
 <br>Solo para vuelo simulado.</p>
 <br>
